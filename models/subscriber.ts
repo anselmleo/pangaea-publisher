@@ -28,7 +28,7 @@ const SubscriberAudit = mongoose.model(
   SubscriberAuditSchema
 );
 
-exports.validateSubscriberPost = async (subscriber: SubscriberAttributes) => {
+const validateSubscriberPost = async (subscriber: SubscriberAttributes) => {
   const schema = Joi.object({
     subscriberUrl: Joi.string().required()
   });
@@ -36,10 +36,11 @@ exports.validateSubscriberPost = async (subscriber: SubscriberAttributes) => {
   try {
     const value = await schema.validateAsync(subscriber);
   } catch (error) {
-    throw new Error('Failed to validate input ' + error.details[0].message);
+    // throw new Error('Failed to validate input ' + error.details[0].message);
+    return error;
   }
 };
 
-exports.Subscriber = Subscriber;
-exports.SubscriberAudit = SubscriberAudit;
-// export { SubscriberAudit, Subscriber };
+// exports.Subscriber = Subscriber;
+// exports.SubscriberAudit = SubscriberAudit;
+export { SubscriberAudit, Subscriber, validateSubscriberPost };
