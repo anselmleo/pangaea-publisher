@@ -25,8 +25,9 @@ dead-drop link for environment varaibles.
  $ git clone https://github.com/anselmleo/pangaea-publisher.git
 ```
 
-**Environment Variables (Link is valid for 24hrs only)** Location:
-https://dead-drop.me/pickup/60915dc5d68ec Password: SN2y8YGLzo4MJTA
+**Environment Variables (Link is valid for 24hrs only)**
+
+Location: https://dead-drop.me/pickup/60915dc5d68ec Password: SN2y8YGLzo4MJTA
 
 **Install packages**
 
