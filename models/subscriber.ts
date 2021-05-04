@@ -1,5 +1,4 @@
-import config from 'config';
-import mongoose from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 import Joi from 'joi';
 
 // interface SubscriberAttributes
@@ -14,7 +13,10 @@ const SubscriberSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Subscriber = mongoose.model('Subscriber', SubscriberSchema);
+const Subscriber = mongoose.model<SubscriberAttributes & Document>(
+  'Subscriber',
+  SubscriberSchema
+);
 
 const SubscriberAuditSchema = new mongoose.Schema(
   {
@@ -30,7 +32,7 @@ const SubscriberAudit = mongoose.model(
 
 const validateSubscriberPost = async (subscriber: SubscriberAttributes) => {
   const schema = Joi.object({
-    subscriberUrl: Joi.string().required()
+    url: Joi.string().required()
   });
 
   try {
@@ -41,6 +43,14 @@ const validateSubscriberPost = async (subscriber: SubscriberAttributes) => {
   }
 };
 
-// exports.Subscriber = Subscriber;
-// exports.SubscriberAudit = SubscriberAudit;
+// audit purposes
+async function logCurrentSubscriberState(subscriber: any) {
+  let auditSubscriber = new SubscriberAudit({
+    subscriberId: subscriber._id.toString(),
+    subscriberUrl: subscriber.subscriberUrl
+  });
+
+  await auditSubscriber.save();
+}
+
 export { SubscriberAudit, Subscriber, validateSubscriberPost };
