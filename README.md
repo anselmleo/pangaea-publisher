@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="#"><img src="https://img.shields.io/badge/company-pangaea-blue" alt="Pangaea"></a>
-<a href="#"><img src="https://img.shields.io/badge/project-pangaea-publisher-f39f37" alt="Project"></a>
+<a href="#"><img src="https://img.shields.io/badge/project-pangaea-f39f37" alt="Project"></a>
 <a href="#"><img src="https://img.shields.io/badge/status-done-4ac75e" alt="Status"></a>
 <a href="#"><img src="https://img.shields.io/badge/licence-mit-f39f37" alt="License"></a>
 </p>
