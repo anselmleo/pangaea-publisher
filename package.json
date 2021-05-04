@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf biuld/ && prettier --write . && tsc",
-    "dev": "NODE_ENV=dev nodemon index.ts"
+    "dev": "NODE_ENV=dev nodemon index.ts",
+    "testing": "NODE_ENV=testing ts-node index.ts",
+    "debug": "NODE_ENV=testing nodemon index.ts"
   },
   "author": "Anselm Mba",
   "license": "ISC",
