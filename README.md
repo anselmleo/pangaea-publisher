@@ -7,7 +7,7 @@
 <a href="#"><img src="https://img.shields.io/badge/licence-mit-f39f37" alt="License"></a>
 </p>
 
-## Pangaea Tasks
+## Pangaea Publisher
 
 To build a HTTP notification system.
 
@@ -25,7 +25,7 @@ dead-drop link for environment varaibles.
  $ git clone https://github.com/anselmleo/pangaea-publisher.git
 ```
 
-**Environment Variables (Link is valid for 24hrs only)**
+**Environment Variables (See .env.example file)**
 
 Location: https://dead-drop.me/pickup/60915dc5d68ec Password: SN2y8YGLzo4MJTA
 
@@ -59,5 +59,6 @@ $ pm2 run staging-ecosystem.config.js (Not yet applicable)
 $ pm2 run prod-ecosystem.config.js (Not yet applicable)
 ```
 
-**Postman Collection**
-https://www.getpostman.com/collections/e8c094fa1bbde9361bbd
+**Postman Documentation**
+
+https://documenter.getpostman.com/view/7773506/TzRPhTxw

@@ -5,6 +5,7 @@ import { Request, Response, NextFunction } from 'express';
 export default (req: Request, _res: Response, next: NextFunction) => {
   if (
     config.get('environment') === 'dev' ||
+    config.get('environment') === 'testing' ||
     config.get('environment') === 'staging'
   ) {
     // this should be disable for production -->
